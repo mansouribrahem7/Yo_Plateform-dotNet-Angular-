@@ -1,0 +1,14 @@
+<div class="background-container">
+    <!-- Content goes here -->
+    <div class="content">
+        <h1>Welcome to <span class="logo">YO</span> platform</h1>
+        <p>Create your project now! </p>
+        <button [hidden]="!loggedIn" routerLink="/projects" type="button" class=" btn btn-outline-success">Getting
+            Started</button>
+        <button [hidden]="loggedIn" routerLink="/register" type="button"
+            class="m-2 btn btn-outline-success">Register</button>
+
+        <button [hidden]="loggedIn" routerLink="/login" type="button" class="m-2 btn btn-outline-success">Login</button>
+    </div>
+
+</div>

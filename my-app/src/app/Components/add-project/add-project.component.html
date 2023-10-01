@@ -1,0 +1,46 @@
+<form [formGroup]="projectForm" (ngSubmit)="controlForm()" class="mt-5">
+    <div class="col">
+        <div class="form-outline">
+            <label class="form-label " for="form6Example1">Project Name</label>
+            <input formControlName="projectName" type="text" id="form6Example1" class="form-control" />
+        </div>
+        <small class="text-danger" *ngIf="projectName.invalid && (projectName.dirty || projectName.touched)">
+            <div *ngIf="projectName.hasError('required')">*Project Name is
+                required</div>
+        </small>
+    </div>
+
+    <div class="form-outline">
+        <label class="mt-2" for="projectType">Project Type</label>
+        <select formControlName="projectType" id="projectType" class="form-select">
+
+            <option *ngFor="let type of projectTypes" [value]="type">{{ type }}</option>
+
+        </select>
+        <small class="text-danger" *ngIf="projectType.invalid && (projectType.dirty || projectType.touched)">
+            <div *ngIf="projectType.hasError('required')">*Project Type is
+                required</div>
+        </small>
+    </div>
+    <!-- Project Date -->
+    <div class="form-outline mb-4">
+        <label class="form-label mt-2" for="form6Example4">Project Date</label>
+        <!-- <input *ngIf="editeMode==true" [value]="project.date | date: 'yyyy-MM-dd'" [(ngModel)]="project.date"
+            name="date" type="date" id="form6Example4" class="form-control" /> -->
+
+        <!-- <div>{{project.date | date: 'MM/dd/yyyy'}}</div> -->
+        <input formControlName="projectDate" [value]="project.date" name="date" type="date" id="form6Example4"
+            class="form-control" />
+        <small class="text-danger" *ngIf="projectDate.invalid && (projectDate.dirty || projectDate.touched)">
+            <div *ngIf="projectType.hasError('required')">*Project Date is
+                required</div>
+        </small>
+
+    </div>
+    <!-- Submit button -->
+    <button [disabled]="projectForm.invalid" *ngIf="editeMode==false" type="submit"
+        class="btn btn-success btn-block mb-4">Add Project</button>
+    <button [disabled]="projectForm.invalid" *ngIf="editeMode==true" type="submit"
+        class="btn btn-success btn-block mb-4">Update Project</button>
+
+</form>

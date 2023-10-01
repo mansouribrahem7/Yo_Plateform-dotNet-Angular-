@@ -1,0 +1,39 @@
+/* styles.css */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.background-container {
+    background-color: #eee;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff; /* Text color on top of the background */
+}
+
+.content {
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+p {
+    font-size: 18px;
+    color: black;
+
+}
+.logo{
+    color: red;
+    font-weight: 900;
+    font-size: 36px;
+
+}

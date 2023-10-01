@@ -1,0 +1,58 @@
+<!-- <hr style=" border: 15px solid red;">
+<br>
+<ul *ngIf="isShown">
+    <li appLightBox *ngFor="let user of users">
+        <p [class.bg-danger]="user.userName===activeMariam">{{user.userName}}</p>
+        <p>{{user.email}}</p>
+        <hr>
+    </li>
+</ul>
+<button (click)="toggleData()" class="btn btn-primary">
+    <div *ngIf="isShown">Hide</div>
+    <div *ngIf="!isShown">Show</div>
+</button>
+<hr style=" border: 15px solid red;"> -->
+<!-- ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
+
+
+
+<!-- <select [(ngModel)]="activeMariam" style="width: 250px;" name="" id="">
+
+    <ng-container *ngFor="let user of users">
+        <ng-container [ngSwitch]="user.userName">
+
+            <option *ngSwitchCase="'Mariamm1'" [value]="user.userName">
+                The First Marriam
+            </option>
+
+            <option *ngSwitchCase="'Mariamm8'" [value]="user.userName">
+                The Last Marriam
+            </option>
+
+            <option *ngSwitchDefault [value]="user.userName">
+                Other Marriam
+            </option>
+        </ng-container>
+    </ng-container>
+</select>
+<div>
+    {{activeMariam}}
+</div>
+<button (click)="ChangeMarriam()">Change from Model</button>
+
+
+<div>{{price | currency}}</div>
+<div>{{date | date:'medium'}}</div>
+<div>{{msg}}</div> -->
+
+
+<div>
+
+    <div>
+        <router-outlet style="max-height: 300px; overflow-y: auto;"></router-outlet>
+    </div>
+    <ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="timer" [fullScreen]="true">
+        <p style="color: white"> Loading... </p>
+    </ngx-spinner>
+
+</div>
